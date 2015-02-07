@@ -29,15 +29,15 @@
   apt-get install -y postgresql-9.3 libpq-dev pgadmin3
   echo "'sudo -u postgres psql' to change password: ALTER USER postgres PASSWORD 'newPassword';"
 
-  echo "install mysql"
-  apt-get install mysql-server-5.6
-  echo "install mysql"
-  mysql_install_db
-  mysql_secure_installation
-  echo "install libmysql"
-  apt-get install libmysqlclient-dev
-  echo "install mysql mysql-workbench"
-  apt-get install  mysql-workbench
+  # echo "install mysql"
+  # apt-get install mysql-server-5.6
+  # echo "install mysql"
+  # mysql_install_db
+  # mysql_secure_installation
+  # echo "install libmysql"
+  # apt-get install libmysqlclient-dev
+  # echo "install mysql mysql-workbench"
+  # apt-get install  mysql-workbench
 
   # install mongo
   echo "install mongodb"
