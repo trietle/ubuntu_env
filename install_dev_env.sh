@@ -12,7 +12,9 @@
   apt-get install git git-gui curl vim vim-rails
 
   echo "Add postgresql repo"
-  add-apt-repository ppa:pitti/postgresql
+  # add-apt-repository ppa:pitti/postgresql or
+  apt-add-repository "deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main"
+  wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc |   sudo apt-key add -
   echo "Add mongodb repo"
   apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
   echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
@@ -65,6 +67,10 @@
 
   echo "install rvm ruby"
   \curl -L https://get.rvm.io | bash -s stable --ruby
+
+  echo "install zsh"
+  curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+  apt-get install -y zsh
 
   echo "Install more apps"
 
