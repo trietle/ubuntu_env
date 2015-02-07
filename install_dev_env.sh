@@ -46,8 +46,12 @@
   apt-get install -y mongodb-org
   echo "install redis-server"
   apt-get install -y redis-server
+  
   echo "Install nodejs, npm"
   apt-get install -y nodejs npm
+  echo "Or use nvm (like rvm) for nodejs"
+  echo "Install: curl https://raw.githubusercontent.com/creationix/nvm/v0.16.1/install.sh | sh"
+
   echo "Install toolbelt HEROKU"
   # add heroku repository to apt
   echo "deb http://toolbelt.heroku.com/ubuntu ./" > /etc/apt/sources.list.d/heroku.list
