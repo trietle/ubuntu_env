@@ -9,7 +9,7 @@
     sudo sh <<SCRIPT
 
   echo "Install Git git-gui curl vim"
-  apt-get install git git-gui curl vim vim-rails
+  apt-get install -y git git-gui curl vim vim-rails
 
   echo "Add postgresql repo"
   # add-apt-repository ppa:pitti/postgresql or
@@ -28,7 +28,7 @@
   echo "Update repository on the machine"
   apt-get update
 
-  apt-get install -y postgresql-9.3 libpq-dev pgadmin3
+  apt-get install -y postgresql-9.4 libpq-dev pgadmin3
   echo "'sudo -u postgres psql' to change password: ALTER USER postgres PASSWORD 'newPassword';"
 
   # echo "install mysql"
@@ -45,7 +45,7 @@
   echo "install mongodb"
   apt-get install -y mongodb-org
   echo "install redis-server"
-  apt-get install redis-server
+  apt-get install -y redis-server
 
   echo "Install toolbelt HEROKU"
   # add heroku repository to apt
@@ -78,16 +78,10 @@
   apt-get install -y vlc gimp vim vim-rails guake
 
   echo "Install Sublime text 3"
-  apt-get install sublime-text-installer
+  apt-get install -y sublime-text-installer
 
-  echo "Install skype"
-  apt-get install skype
-
-  # google chrome
-  apt-get install google-chrome-stable
-
-  echo "install dropbox"
-  apt-get install nautilus-dropbox
+  echo "Install skype, chrome, dropbox"
+  apt-get install skype google-chrome-stable nautilus-dropbox -y
 
 SCRIPT
 }
