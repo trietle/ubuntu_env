@@ -11,16 +11,6 @@
   echo "Install Git git-gui curl vim"
   apt-get install git git-gui curl vim vim-rails
 
-  echo "install dropbox"
-  apt-get install nautilus-dropbox
-  echo "install python-software-properties openjdk-7-jre"
-  apt-get install python-software-properties openjdk-7-jre -y
-  echo "install libmagickwand-dev"
-  apt-get install libmagickwand-dev
-
-  echo "install ruby"
-  \curl -L https://get.rvm.io | bash -s stable --ruby
-
   echo "Add postgresql repo"
   add-apt-repository ppa:pitti/postgresql
   echo "Add mongodb repo"
@@ -58,6 +48,14 @@
   # install the toolbelt
   apt-get install -y heroku-toolbelt
 
+  echo "install python-software-properties openjdk-7-jre"
+  apt-get install python-software-properties openjdk-7-jre -y
+  echo "install libmagickwand-dev"
+  apt-get install libmagickwand-dev
+
+  echo "install rvm ruby"
+  \curl -L https://get.rvm.io | bash -s stable --ruby
+
   echo "Install more apps"
 
   echo "Install vlc gimp vim guake"
@@ -71,6 +69,9 @@
 
   # google chrome
   apt-get install google-chrome-stable
+
+  echo "install dropbox"
+  apt-get install nautilus-dropbox
 
 SCRIPT
 }
