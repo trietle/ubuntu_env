@@ -63,14 +63,15 @@
   echo "install python-software-properties openjdk-7-jre"
   apt-get install python-software-properties openjdk-7-jre -y
   echo "install libmagickwand-dev"
-  apt-get install libmagickwand-dev
-
-  echo "install rvm ruby"
-  \curl -L https://get.rvm.io | bash -s stable --ruby
+  apt-get install -y libmagickwand-dev
 
   echo "install zsh"
-  curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
   apt-get install -y zsh
+  curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+
+  echo "install rvm ruby"
+  gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+  \curl -L https://get.rvm.io | bash -s stable --ruby
 
   echo "Install more apps"
 
